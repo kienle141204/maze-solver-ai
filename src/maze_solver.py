@@ -1,7 +1,7 @@
 from queue import Queue
 from utils import re_path
 from queue import PriorityQueue
-from maze import read_image,matrix_to_image
+from maze import read_image, save_result_image
 # bfs tim duong di ngan nhat
 def bfs(maze, start, goal):
     rows = len(maze)

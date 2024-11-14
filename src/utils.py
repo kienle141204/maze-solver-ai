@@ -1,5 +1,6 @@
 import json
-
+import numpy as np
+import matplotlib.pyplot as plt
 
 # dung lai duong di
 def re_path(maze, came_from, current):
@@ -73,3 +74,12 @@ def save_solution(path, algorithm, output_name, _time):
         json.dump(solution_data, json_file, indent=4)
 
     print(f"Solution saved to {output_path}")
+
+
+def create_plot(plot_name, x_axis, y_axis, y_value):
+    x = np.arange(len(x_axis))
+    width = 0.2
+
+    fig, ax = plt.subplots()
+    ax.bar(x-width/2, )
+

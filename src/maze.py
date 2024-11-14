@@ -24,7 +24,7 @@ def read_image(filename):
 
 
 # chuyen ma tran thanh anh
-def matrix_to_image(maze,filename):
+def save_result_image(maze,alogorithm,filename):
     maze_array = np.array(maze, dtype=np.uint8)
 
     height, width = maze_array.shape
@@ -43,7 +43,7 @@ def matrix_to_image(maze,filename):
                 rgb_image[i, j] = [255, 0, 0]
 
     img = Image.fromarray(rgb_image, mode='RGB')
-    img.save('../results/{}_ans.png'.format(filename))
+    img.save('../results/{}/{}_ans.png'.format(alogorithm,filename))
     img.show()
 
 
